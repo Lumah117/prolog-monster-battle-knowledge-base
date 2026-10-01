@@ -1,0 +1,130 @@
+
+1. 
+Query: basicType(X).
+
+Answer: X = fire
+        X = ghost
+        X = grass
+        X = normal
+        X = water
+
+2.
+Query: monster(X,Y).
+
+Answer: X = chewtle,
+        Y = water
+        X = pansage,
+        Y = grass
+        X = rapidash,
+        Y = fire
+        X = shuppet,
+        Y = ghost
+        X = wooloo,
+        Y = normal
+
+3. 
+Query: move(X,normal).
+
+Answer: X = headbutt
+        X = quickAttack
+        X = screech
+        X = stomp
+        X = tackle
+
+4.
+Query: monsterMove(shuppet,X).
+
+Answer: X = hex
+        X = screech
+        X = shadowBall
+        X = sunnyDay
+
+5.
+Query: monsterMove(wooloo, X).
+
+Answer: X = grassySlide
+        X = headbutt
+        X = stomp
+        X = tackle
+
+6.
+Query: typeEffectiveness(grass,X,Y).
+
+Answer: X = fire,
+        Y = weak
+        X = ghost,
+        Y = ordinary
+        X = grass,
+        Y = weak
+        X = normal,
+        Y = ordinary
+        X = water,
+        Y = strong
+
+7.
+Query: typeEffectiveness(ghost,X,Y).
+
+Answer: X = fire,
+        Y = ordinary
+        X = ghost,
+        Y = strong
+        X = grass,
+        Y = ordinary
+        X = normal,
+        Y = superweak
+        X = water,
+        Y = ordinary
+
+8.
+Query: moreEffective(X,weak).
+
+Answer: X = ordinary
+
+9.
+Query: monsterMoveTypeMatch(headbutt,X).
+
+Answer: X = wooloo
+
+10.
+Query: moreEffectiveTypeMove(grass,X,hydroPump).
+
+Answer: X = flameCharge
+        X = sunnyDay
+        X = hex
+        X = lick
+        X = headbutt
+        X = overheat
+        X = quickAttack
+        X = screech
+        X = shadowBall
+        X = stomp
+        X = tackle
+
+11.
+Query: moreEffectiveTypeMove(water,headbutt,Y).
+
+Answer: Y = flameCharge
+        Y = overheat
+        Y = sunnyDay
+        Y = hydroPump
+        Y = waterGun
+
+12.
+Query: moreEffectiveMonsterMove(rapidash,chewtle,flameCharge,waterGun).
+
+Answer: false
+
+13.
+Query: moreEffectiveMonsterMove(chewtle,rapidash,waterGun,flameCharge).
+
+Answer: true
+
+14.
+Query: moreEffectiveMonsterMove(rapidash,pansage,flameCharge,lick)
+
+Answer: true
+
+15.
+Query: moreEffectiveMonsterMove(wooloo,shuppet,grassySlide,screech).
+
+Answer: false
